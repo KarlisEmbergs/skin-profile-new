@@ -1,0 +1,37 @@
+<div class="container mx-auto px-4 pb-12">
+  <div class="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-12 md:gap-12 justify-center transition-hide">
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <div class="w-full md:w-1/2 ">
+      <div class="prose max-w-none space-y-2">
+        {{ section.settings.text }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Teksta sadaļa",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Virsraksts",
+      "default": "Virsraksts šeit"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Teksts",
+      "default": "<p>Jūsu teksts šeit.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Teksta sadaļa"
+    }
+  ]
+}
+{% endschema %}
